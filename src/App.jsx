@@ -7,7 +7,9 @@ import Complete from "./components/Complete"
 import Whychoose from "./components/Whychoose"
 import Testimonials from "./components/Testimonials"
 import Contact from "./components/Contact"
-import Footer from "./components/Footer"
+import Footer from "./components/footer"
+
+
 
 const App = () => {
   return (
@@ -21,7 +23,7 @@ const App = () => {
       <Whychoose />
       <Testimonials />
       <Contact />
-      <Footer />
+      <Footer/>
     </div>
   )
 }
