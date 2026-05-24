@@ -1,8 +1,9 @@
 import { services } from "../data/Services";
+import toast from 'react-hot-toast';
 
 const Services = () => {
   return (
-    <section className="relative px-8 py-20 bg-slate-50 overflow-hidden">
+    <section className="relative px-8 py-20 bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden">
       {/* Optional faint background decorative element */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-64 h-64 bg-purple-200/20 rounded-full blur-3xl" />
       
@@ -14,7 +15,7 @@ const Services = () => {
             <p className="text-lg text-slate-600 mt-2">End to End Construction <span className="text-purple-600 font-semibold">Solution</span></p>
           </div>
           <button 
-            onClick={() => alert("Full services catalog coming soon!")}
+            onClick={() => toast.success("Full services catalog coming soon!", { icon: '✨' })}
             className="rounded-full border border-slate-300 bg-white px-6 py-2.5 text-sm font-semibold text-slate-800 shadow-sm hover:bg-slate-50 active:scale-95 transition shrink-0"
           >
             View All Services →
@@ -23,7 +24,11 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service) => (
-            <div key={service.id} className="flex gap-6 rounded-2xl border border-purple-100 bg-white p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-purple-300 transition-all duration-300 group cursor-pointer">
+            <div 
+              key={service.id} 
+              onClick={() => toast(`More details about ${service.title} coming soon!`, { icon: 'ℹ️' })}
+              className="flex gap-6 rounded-2xl border border-purple-100 bg-white p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-purple-300 transition-all duration-300 group cursor-pointer"
+            >
               <div className="shrink-0 flex h-14 w-14 items-center justify-center rounded-xl bg-purple-50 text-2xl group-hover:bg-gradient-to-br group-hover:from-purple-500 group-hover:to-pink-500 group-hover:text-white transition-all duration-300 text-purple-600 shadow-sm">
                 {service.icon}
               </div>

@@ -1,9 +1,10 @@
 
+import toast from 'react-hot-toast';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#f4f0ff] px-8 py-16">
+    <footer className="bg-gradient-to-br from-purple-50 via-white to-pink-50 px-8 py-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid gap-10 lg:grid-cols-4 mb-12">
           {/* Column 1: Logo & Info */}
@@ -73,7 +74,10 @@ const Footer = () => {
                 placeholder="Your email"
                 className="w-full rounded-md border border-slate-300 bg-white px-4 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
               />
-              <button className="rounded-md bg-purple-500 px-4 py-2 text-sm font-semibold text-white hover:bg-purple-600 transition">
+              <button 
+                onClick={() => toast.success("Subscribed successfully!", { icon: '📬' })}
+                className="rounded-md bg-purple-500 px-4 py-2 text-sm font-semibold text-white hover:bg-purple-600 active:scale-95 transition"
+              >
                 Send
               </button>
             </div>

@@ -8,7 +8,7 @@ const WhyChoose = () => {
   ];
 
   return (
-    <section className="px-8 py-20 bg-purple-50/50">
+    <section className="px-8 py-20 bg-gradient-to-br from-purple-50 via-white to-fuchsia-50">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           

@@ -10,17 +10,19 @@ import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 
 
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   return (
-    <div>
+    <div className="page-background min-h-screen">
+      <Toaster position="bottom-center" />
       <Navbar />
       <div id="home"><Hero /></div>
       <div id="about"><Vission /></div>
       <div id="services"><Services /></div>
       <div id="projects"><Upcoming /><Complete /></div>
       <div id="insights"><Whychoose /><Testimonials /></div>
-      <Contact />
+      <div id="contact"><Contact /></div>
       <Footer/>
     </div>
   )

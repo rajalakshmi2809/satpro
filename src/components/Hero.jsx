@@ -1,5 +1,6 @@
 import heroImg from "../assets/hero_apartments_dusk.png";
 import { FaClock, FaBuilding, FaUsers, FaTrophy } from "react-icons/fa";
+import toast from 'react-hot-toast';
 
 const Hero = () => {
   return (
@@ -28,7 +29,10 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-4 group">
-              <button className="rounded-full bg-gradient-to-r from-purple-600 to-purple-500 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-purple-500/30 hover:shadow-purple-500/50 hover:-translate-y-1 transition-all duration-300">
+              <button 
+                onClick={() => toast.success("Consultation scheduling coming soon!", { icon: '📅' })}
+                className="rounded-full bg-gradient-to-r from-purple-600 to-purple-500 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-purple-500/30 hover:shadow-purple-500/50 hover:-translate-y-1 active:scale-95 transition-all duration-300"
+              >
                 Get Free Consultation
               </button>
               <button 
@@ -66,6 +70,25 @@ const Hero = () => {
               </div>
           </div>
 
+        </div>
+      </div>
+
+      {/* Bottom Features Bar */}
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-purple-600 to-purple-500 py-3.5 border-t border-white/20">
+        <div className="flex justify-between items-center w-full max-w-7xl mx-auto px-2 sm:px-8 overflow-hidden">
+          {[
+            "LUXURY VILLAS",
+            "COMMERCIAL PROJECTS",
+            "INTERIOR CONSTRUCTION",
+            "SMART HOMES",
+            "RENOVATION",
+            "ARCHITECTURE"
+          ].map((item, index) => (
+            <div key={index} className="flex items-center gap-1.5 md:gap-3 text-white text-[8px] sm:text-[10px] md:text-xs lg:text-sm font-bold tracking-wider sm:tracking-widest whitespace-nowrap">
+              <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-white rounded-full shadow-sm shrink-0"></span>
+              {item}
+            </div>
+          ))}
         </div>
       </div>
     </section>

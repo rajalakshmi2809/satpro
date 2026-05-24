@@ -14,7 +14,8 @@ const Navbar = () => {
             { name: "About Us", id: "about" },
             { name: "Projects", id: "projects" },
             { name: "Our Services", id: "services" },
-            { name: "Insights", id: "insights" }
+            { name: "Insights", id: "insights" },
+            { name: "Contact", id: "contact" }
           ].map((link) => (
             <li 
               key={link.name} 
@@ -30,8 +31,10 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Button */}
-        <button className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-7 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 hover:-translate-y-0.5 transition-all duration-300">
+        <button 
+          onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
+          className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-7 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 hover:-translate-y-0.5 active:scale-95 transition-all duration-300"
+        >
           Get Consultation
         </button>
       </div>

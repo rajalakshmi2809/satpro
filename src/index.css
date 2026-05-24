@@ -10,4 +10,15 @@ html {
 
 body {
   font-family: 'Outfit', sans-serif;
+  background: radial-gradient(circle at top left, rgba(139, 92, 246, 0.12), transparent 22%),
+              radial-gradient(circle at top right, rgba(236, 72, 153, 0.10), transparent 24%),
+              radial-gradient(circle at bottom left, rgba(124, 58, 237, 0.08), transparent 26%),
+              #fbf5ff;
+  color: #111827;
+}
+
+.page-background {
+  background: radial-gradient(circle at top, rgba(139, 92, 246, 0.12), transparent 28%),
+              radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.10), transparent 22%),
+              #fdf7ff;
 }

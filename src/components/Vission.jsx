@@ -3,7 +3,7 @@ import { FaLeaf, FaHardHat, FaGem, FaClock, FaStar } from "react-icons/fa";
 
 const Vission = () => {
   return (
-    <section className="px-8 py-20 bg-white">
+    <section className="px-8 py-20 bg-gradient-to-br from-white via-purple-50 to-fuchsia-50">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] gap-14 items-center">
         
         {/* Left Side: Text and Features */}

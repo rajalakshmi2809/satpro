@@ -1,5 +1,6 @@
 import { useState } from "react";
 import heroImg from "../assets/media__1779632841318.jpg";
+import toast from 'react-hot-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +21,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thank you! We will contact you soon.");
+    toast.success("Thank you! We will contact you soon.", { icon: '✉️' });
     setFormData({ name: "", email: "", phone: "", project: "", message: "" });
   };
 
@@ -37,6 +38,28 @@ const Contact = () => {
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
               Start Your <span className="text-purple-600">Dream</span> Project Today
             </h2>
+            <div className="flex flex-wrap gap-6 pt-2">
+              <div 
+                onClick={() => {
+                  navigator.clipboard.writeText("info@arkhe.com");
+                  toast.success("Email address copied!", { icon: '📧' });
+                }}
+                className="flex items-center gap-2 text-slate-600 hover:text-purple-600 font-medium cursor-pointer active:scale-95 transition-all group"
+              >
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all text-sm">✉️</span>
+                info@arkhe.com
+              </div>
+              <div 
+                onClick={() => {
+                  navigator.clipboard.writeText("+1 234 567 8900");
+                  toast.success("Phone number copied!", { icon: '📞' });
+                }}
+                className="flex items-center gap-2 text-slate-600 hover:text-purple-600 font-medium cursor-pointer active:scale-95 transition-all group"
+              >
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all text-sm">📱</span>
+                +1 234 567 8900
+              </div>
+            </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -94,7 +117,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-1/2 rounded-full bg-gradient-to-r from-purple-600 to-purple-500 px-6 py-4 text-sm font-bold text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 hover:-translate-y-1 transition-all duration-300"
+              className="w-1/2 rounded-full bg-gradient-to-r from-purple-600 to-purple-500 px-6 py-4 text-sm font-bold text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 hover:-translate-y-1 active:scale-95 transition-all duration-300"
             >
               Send Message
             </button>
