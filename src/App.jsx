@@ -7,7 +7,7 @@ import Complete from "./components/Complete"
 import Whychoose from "./components/Whychoose"
 import Testimonials from "./components/Testimonials"
 import Contact from "./components/Contact"
-import Footer from "./components/footer"
+import Footer from "./components/Footer"
 
 
 
