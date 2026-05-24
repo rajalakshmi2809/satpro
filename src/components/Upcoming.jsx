@@ -34,7 +34,16 @@ const Upcoming = () => {
             </div>
 
             {/* View All Button */}
-            <button className="rounded-full border border-slate-300 bg-white px-6 py-2.5 text-sm font-semibold text-slate-800 shadow-sm hover:bg-slate-50 transition shrink-0">
+            <button 
+              onClick={() => {
+                if (active === "All") {
+                  alert("More upcoming projects will be added soon!");
+                } else {
+                  setActive("All");
+                }
+              }} 
+              className="rounded-full border border-slate-300 bg-white px-6 py-2.5 text-sm font-semibold text-slate-800 shadow-sm hover:bg-slate-50 active:scale-95 transition shrink-0"
+            >
               View All Projects →
             </button>
           </div>

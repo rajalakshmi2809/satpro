@@ -1,4 +1,5 @@
 import modernVillaImg from "../assets/modern_villa_1779629718947.png";
+import { FaLeaf, FaHardHat, FaGem, FaClock, FaStar } from "react-icons/fa";
 
 const Vission = () => {
   return (
@@ -15,28 +16,28 @@ const Vission = () => {
 
           <div className="grid sm:grid-cols-2 gap-4 mt-8">
             <div className="flex items-center gap-4 rounded-xl bg-slate-50 border border-slate-100 p-4">
-              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-xl shadow-sm">🌿</span>
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-xl shadow-sm text-purple-600"><FaLeaf size={20} /></span>
               <div>
                 <h3 className="text-sm font-bold text-slate-900">Sustainable Build</h3>
                 <p className="text-xs text-slate-500">Eco-friendly design</p>
               </div>
             </div>
             <div className="flex items-center gap-4 rounded-xl bg-slate-50 border border-slate-100 p-4">
-              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-xl shadow-sm">👷</span>
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-xl shadow-sm text-purple-600"><FaHardHat size={20} /></span>
               <div>
                 <h3 className="text-sm font-bold text-slate-900">Expert Engineers</h3>
                 <p className="text-xs text-slate-500">Certified team</p>
               </div>
             </div>
             <div className="flex items-center gap-4 rounded-xl bg-slate-50 border border-slate-100 p-4">
-              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-xl shadow-sm">💎</span>
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-xl shadow-sm text-purple-600"><FaGem size={20} /></span>
               <div>
                 <h3 className="text-sm font-bold text-slate-900">Premium Quality</h3>
                 <p className="text-xs text-slate-500">Finest materials</p>
               </div>
             </div>
             <div className="flex items-center gap-4 rounded-xl bg-slate-50 border border-slate-100 p-4">
-              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-xl shadow-sm">⏱️</span>
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-xl shadow-sm text-purple-600"><FaClock size={20} /></span>
               <div>
                 <h3 className="text-sm font-bold text-slate-900">Timely Delivery</h3>
                 <p className="text-xs text-slate-500">On-schedule projects</p>
@@ -56,7 +57,7 @@ const Vission = () => {
           </div>
           {/* Overlapping Badge */}
           <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white/80 p-6 shadow-xl backdrop-blur-md border border-white/50 max-w-[150px] text-center">
-             <div className="text-3xl mb-2">⭐</div>
+             <div className="text-3xl mb-2 text-yellow-400 flex justify-center"><FaStar /></div>
              <p className="text-sm font-bold text-slate-900 leading-tight">15+ Years <span className="block text-purple-600 font-semibold text-xs mt-1">Experience</span></p>
           </div>
         </div>
